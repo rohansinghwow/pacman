@@ -39,3 +39,20 @@ const layout = [
     1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1 
 ]
+
+function createBoard() {
+    for (let i = 0; i < layout.length; i++) {
+        //create a square
+        const square = document.createElement('div')
+        //put  square in grid
+        grid.appendChild(square)
+        //put square in squares array
+        squares.push(square)
+        
+        
+        
+        if (layout[i] === 0) {
+            squares[i].classList.add('pac-dot')
+        }
+    }
+}
